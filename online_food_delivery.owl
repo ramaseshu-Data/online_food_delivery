@@ -1,0 +1,383 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/fooddelivery/"
+     xml:base="http://www.semanticweb.org/ontologies/fooddelivery/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:fooddelivery="http://www.semanticweb.org/ontologies/fooddelivery#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ontologies/fooddelivery"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/fooddelivery#containsItem -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/fooddelivery#containsItem">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#Order"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#MenuItem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/fooddelivery#deliversOrder -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/fooddelivery#deliversOrder">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#DeliveryAgent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#Order"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/fooddelivery#hasAddress -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/fooddelivery#hasAddress">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#Customer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#Address"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/fooddelivery#hasPayment -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/fooddelivery#hasPayment">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#Order"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#Payment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/fooddelivery#placesOrder -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/fooddelivery#placesOrder">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#Customer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#Order"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/fooddelivery#preparedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/fooddelivery#preparedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#Order"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#Restaurant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/fooddelivery#addressLine -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/fooddelivery#addressLine">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/fooddelivery#itemName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/fooddelivery#itemName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#MenuItem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/fooddelivery#orderDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/fooddelivery#orderDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#Order"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/fooddelivery#paymentAmount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/fooddelivery#paymentAmount">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#Payment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/fooddelivery#personName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/fooddelivery#personName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/fooddelivery#restaurantName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/fooddelivery#restaurantName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#Restaurant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/fooddelivery#Address -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/fooddelivery#Address"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/fooddelivery#Customer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/fooddelivery#Customer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#Person"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#DeliveryAgent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/fooddelivery#DeliveryAgent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/fooddelivery#DeliveryAgent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#hasPayment"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#Payment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/fooddelivery#MenuItem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/fooddelivery#MenuItem">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#Order"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#Restaurant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/fooddelivery#Order -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/fooddelivery#Order">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#Payment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/fooddelivery#Payment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/fooddelivery#Payment"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/fooddelivery#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/fooddelivery#Person">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#Restaurant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/fooddelivery#Restaurant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/fooddelivery#Restaurant"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/fooddelivery#Address_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/fooddelivery#Address_001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#Address"/>
+        <fooddelivery:addressLine>12 Lake View Road, Hyderabad</fooddelivery:addressLine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/fooddelivery#Address_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/fooddelivery#Address_002">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#Address"/>
+        <fooddelivery:addressLine>45 Green Park Street, Hyderabad</fooddelivery:addressLine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/fooddelivery#Agent_Neha -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/fooddelivery#Agent_Neha">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#DeliveryAgent"/>
+        <fooddelivery:deliversOrder rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#Order_002"/>
+        <fooddelivery:personName>Neha Sharma</fooddelivery:personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/fooddelivery#Agent_Vikram -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/fooddelivery#Agent_Vikram">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#DeliveryAgent"/>
+        <fooddelivery:deliversOrder rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#Order_001"/>
+        <fooddelivery:personName>Vikram Singh</fooddelivery:personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/fooddelivery#Customer_Asha -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/fooddelivery#Customer_Asha">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#Customer"/>
+        <fooddelivery:hasAddress rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#Address_001"/>
+        <fooddelivery:placesOrder rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#Order_001"/>
+        <fooddelivery:personName>Asha Reddy</fooddelivery:personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/fooddelivery#Customer_Rohan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/fooddelivery#Customer_Rohan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#Customer"/>
+        <fooddelivery:hasAddress rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#Address_002"/>
+        <fooddelivery:placesOrder rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#Order_002"/>
+        <fooddelivery:personName>Rohan Kumar</fooddelivery:personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/fooddelivery#Item_Biryani -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/fooddelivery#Item_Biryani">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#MenuItem"/>
+        <fooddelivery:itemName>Chicken Biryani</fooddelivery:itemName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/fooddelivery#Item_Pizza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/fooddelivery#Item_Pizza">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#MenuItem"/>
+        <fooddelivery:itemName>Veg Pizza</fooddelivery:itemName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/fooddelivery#Order_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/fooddelivery#Order_001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#Order"/>
+        <fooddelivery:containsItem rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#Item_Biryani"/>
+        <fooddelivery:hasPayment rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#Payment_001"/>
+        <fooddelivery:preparedBy rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#Restaurant_SpiceHub"/>
+        <fooddelivery:orderDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-04-15T18:30:00</fooddelivery:orderDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/fooddelivery#Order_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/fooddelivery#Order_002">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#Order"/>
+        <fooddelivery:containsItem rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#Item_Pizza"/>
+        <fooddelivery:hasPayment rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#Payment_002"/>
+        <fooddelivery:preparedBy rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#Restaurant_PizzaPoint"/>
+        <fooddelivery:orderDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-04-15T19:00:00</fooddelivery:orderDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/fooddelivery#Payment_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/fooddelivery#Payment_001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#Payment"/>
+        <fooddelivery:paymentAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">450.00</fooddelivery:paymentAmount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/fooddelivery#Payment_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/fooddelivery#Payment_002">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#Payment"/>
+        <fooddelivery:paymentAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">300.00</fooddelivery:paymentAmount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/fooddelivery#Restaurant_PizzaPoint -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/fooddelivery#Restaurant_PizzaPoint">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#Restaurant"/>
+        <fooddelivery:restaurantName>Pizza Point</fooddelivery:restaurantName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/fooddelivery#Restaurant_SpiceHub -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/fooddelivery#Restaurant_SpiceHub">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/fooddelivery#Restaurant"/>
+        <fooddelivery:restaurantName>Spice Hub</fooddelivery:restaurantName>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
