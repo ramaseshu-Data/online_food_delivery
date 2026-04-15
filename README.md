@@ -109,7 +109,8 @@ Implemented queries to:
 
 ## 📁 File
 
-- `online_food_delivery.owl` – Ontology file  
+- `online_food_delivery.owl` – Ontology file
+- - `online_food_delivery_vijay.docx` – Word file (Complete Descripption)  
 
 ---
 
